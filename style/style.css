@@ -2,9 +2,16 @@
     font-family: 'lato', sans-serif;
     font-family: 'open sans', sans-serif;
     font-family: 'work sens ', sans-serif;
+
 }
 .text-light-gray{
     color:#727272;
+}
+.section-title{
+    
+    color: #131313;
+     font-size: 3rem;
+     font-weight: 700;
 }
 /* header styles */
 header{
@@ -12,12 +19,7 @@ header{
     padding:50px 240px
 }
 
-.nav-title{
-    
-    color: #131313;
-     font-size: 3rem;
-     font-weight: 700;
-}
+
 nav{
     display: flex;
     align-items: center;
@@ -102,20 +104,65 @@ main{
     color: #FF900E;
     font-weight: 700;
 }
-
-
-
+/* facts section */
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.facts-card-container .card{
+  border-radius: 8px;
+  border: 1px solid #FF900E;
+  text-align: center;
+  padding:30px ;
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+.facts-card-container .card-stats{
+    font: size 2.8rem; 
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* sponsors style */
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-container{
+    margin-top:50px ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+.sponsors-img-container img{
+    width: 165px;
+}
 /* responsive media queries */
 /* mobile device */
 @media screen and (max-width: 576px) {
     header{
      padding: 20px;
     }
-    nav, .teams-container{
+    nav,
+     .teams-container ,
+     .facts-card-container,
+     .sponsors-img-container
+    {
      flex-direction: column;
     }
     .teams-img-container{
         grid-template-columns: 1fr;
+    }
+    .teams-content, .facts-card-container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .facts-card-container{
+      gap: 20px;
     }
  }
  /* tablet or medium device */
@@ -123,7 +170,7 @@ main{
     header{
         padding: 50px;
     }
- nav, .teams-container{
+ nav, .teams-container, .sponsors-img-container{
      flex-direction: column;
  }
  }
